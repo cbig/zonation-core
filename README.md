@@ -1,3 +1,11 @@
++ [Introduction](https://github.com/cbig/zonation-core#zonation-core)
++ [Authors]()
++ [Compiling from source](https://github.com/cbig/zonation-core#compiling-dynamically-from-source)
++ [Running the tutorial](https://github.com/cbig/zonation-core#testing-zonation-using-the-tutorial-data)
++ [License](https://github.com/cbig/zonation-core#license)
++ [Attribution](https://github.com/cbig/zonation-core#attribution)
+
+
 ## Zonation core
 
 Zonation is a spatial conservation prioritization framework for
@@ -17,6 +25,18 @@ It does not contain the graphical user interface (GUI) components.
 
 You can dowload the latest stable release installers from the CBIG website
 http://cbig.it.helsinki.fi/software/zonation/download/
+
+## Authors and contributors
+
+Authors:
+
++ Atte Moilanen <<atte.moilanen@helsink.fi>>
++ Federico Montesino Pouzols
++ Jarno Leppänen
+
+Contributors:
+
++ Joona Lehtomäki <<joona.lehtomaki@helsink.fi>>
 
 ## Compiling (dynamically) from source
 
@@ -73,7 +93,7 @@ sudo ln -s FULL_PATH/zonation/build/zig4/zig4 /usr/local/bin/zig4
 
 Replace `FULL_PATH` with the full path to the directory containing directory `zonation` created in step 2.
 
-## Testing Zonation using the tutorial data
+## Runnning Zonation using the tutorial data
 
 This stage is completely optional.
 
