@@ -20,8 +20,53 @@ http://cbig.it.helsinki.fi
 
 ## Quick start
 
-For instructions on how to compile Zonation core on Linux (Ubuntu 14.04), please see 
+### Compiling (dynamically) from source
+
+These instruction describe the dynamic compilation of Zonation 4.0.0 on Ubuntu 14.04 (Trusty Tahr). Instructions have 
+not been tested on other distributions/versions. For a set of bash scripts automating the steps below, please see 
 [this repository](https://github.com/cbig/zig4-compilation-scripts). 
+
+#### 1. Install Zonation dependencies
+
+```
+sudo apt-get update
+
+sudo apt-get install cmake build-essential unzip libqt4-dev libfftw3-dev libqwt-dev libboost-all-dev libgdal-dev
+``` 
+
+#### 2. Get Zonation sources
+
+Create a suitable download directory, fetch Zonation source code (version 4.0.0) from CBIG server, and extract the sources to the directory created:
+
+```
+mkdir zonation
+wget https://github.com/cbig/zonation-core/archive/master.zip -P zonation
+unzip zonation/master.zip -d zonation
+```
+
+#### 3. Build Zonation
+
+To build Zonation library (`zig4lib`) and Zonation CLI utility (`zig4`), do the following:
+
+```
+mkdir zonation/build
+cd zonation/build
+cmake ../zonation-core-master
+make
+```
+
+If you have several cores available for compilation, you can pass switch `-jX` to `make` where `X` is the number of 
+designated cores (e.g. `make -j4`).
+
+### 4. Make Zonation available system wide (optional)
+
+In order to call `zig4` anywhere on the system (instead of just the build-location), create a symbolic link:
+
+```
+sudo ln -s FULL_PATH/zonation/build/zig4/zig4 /usr/local/bin/zig4
+```
+
+Replace `FULL_PATH` with the full path to the directory containing directory `zonation` created in step 2.
 
 ## License
 
