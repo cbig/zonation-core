@@ -12,15 +12,18 @@ operates on large grids, it provides a direct link between GIS,
 statistical distribution modeling and spatial conservation
 prioritization.
 
-This repository contains the computational core of Zonation software
-which is licenced under the
-[GNU General Public Licens version 3](https://www.gnu.org/copyleft/gpl.html).
+This repository contains the computational core of Zonation software.
 It does not contain the graphical user interface (GUI) components.
 
 You can dowload the latest stable release installers from the CBIG website
 http://cbig.it.helsinki.fi
 
----
+## Quick start
+
+For instructions on how to compile Zonation core on Linux (Ubuntu 14.04), please see 
+[this repository](https://github.com/cbig/zig4-compilation-scripts). 
+
+## License
 
 Zonation computational core (zig4) is distributed under the 
 GNU General Public License (GPL) version 3
@@ -51,8 +54,7 @@ environments. Anticipating all potential combinations of erroneous
 input has not been possible. Therefore, use the software with care and
 make an effort to understand how the inputs connect to outputs.
 
-
----
+## Attribution
 
 Zonation uses the following libraries: 
 - boost (http://www.boost.org)
