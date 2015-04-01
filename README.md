@@ -42,6 +42,13 @@ wget https://github.com/cbig/zonation-core/archive/master.zip -P zonation
 unzip zonation/master.zip -d zonation
 ```
 
+or you're using git, clone this repo 
+
+```
+mkdir zonation
+git clone https://github.com/cbig/zonation-core.git zonation/zonation-core-master
+```
+
 #### 3. Build Zonation
 
 To build Zonation library (`zig4lib`) and Zonation CLI utility (`zig4`), do the following:
