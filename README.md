@@ -42,7 +42,7 @@ wget https://github.com/cbig/zonation-core/archive/master.zip -P zonation
 unzip zonation/master.zip -d zonation
 ```
 
-or you're using git, clone this repo 
+or if you're using git, clone this repo 
 
 ```
 mkdir zonation
