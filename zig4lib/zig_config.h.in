@@ -1,0 +1,9 @@
+#ifndef ZIG_CONFIG_H
+#define ZIG_CONFIG_H
+
+// Configured options and settings
+#define zonation_VERSION_MAJOR @zonation_VERSION_MAJOR@
+#define zonation_VERSION_MINOR @zonation_VERSION_MINOR@
+#define zonation_VERSION_MINOR @zonation_VERSION_REVISION@
+
+#endif // ZIG_CONFIG_H
