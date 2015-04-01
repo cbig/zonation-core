@@ -1,5 +1,5 @@
 + [Introduction](https://github.com/cbig/zonation-core#zonation-core)
-+ [Authors]()
++ [Authors](https://github.com/cbig/zonation-core#authors-and-contributors)
 + [Compiling from source](https://github.com/cbig/zonation-core#compiling-dynamically-from-source)
 + [Running the tutorial](https://github.com/cbig/zonation-core#testing-zonation-using-the-tutorial-data)
 + [License](https://github.com/cbig/zonation-core#license)
