@@ -18,9 +18,7 @@ It does not contain the graphical user interface (GUI) components.
 You can dowload the latest stable release installers from the CBIG website
 http://cbig.it.helsinki.fi
 
-## Quick start
-
-### Compiling (dynamically) from source
+## Compiling (dynamically) from source
 
 These instruction describe the dynamic compilation of Zonation 4.0.0 on Ubuntu 14.04 (Trusty Tahr). Instructions have 
 not been tested on other distributions/versions. For a set of bash scripts automating the steps below, please see 
@@ -58,7 +56,7 @@ make
 If you have several cores available for compilation, you can pass switch `-jX` to `make` where `X` is the number of 
 designated cores (e.g. `make -j4`).
 
-### 4. Make Zonation available system wide (optional)
+#### 4. Make Zonation available system wide (optional)
 
 In order to call `zig4` anywhere on the system (instead of just the build-location), create a symbolic link:
 
@@ -67,6 +65,56 @@ sudo ln -s FULL_PATH/zonation/build/zig4/zig4 /usr/local/bin/zig4
 ```
 
 Replace `FULL_PATH` with the full path to the directory containing directory `zonation` created in step 2.
+
+## Testing Zonation using the tutorial data
+
+This stage is completely optional.
+
+You can test that Zonation works by running some of the runs used in the 
+[Hunter Valley tutorial](https://github.com/cbig/zonation-tutorial). This is not a thorough test, but it will at least give you an overview on whether Zonationis working as intended. Tutorial data and setup files are fetched using 
+[git](http://git-scm.com/) and run using [zrunner](https://github.com/cbig/zrunner).
+
+#### 5. Install zrunner dependencies
+
+First, install git:
+
+```
+sudo apt-get -y install git
+```
+
+Then, install Python packages needed by zrunner:
+
+```
+sudo apt-get -y install python-yaml python-pip 
+```
+
+#### 6. Install zrunner
+
+zrunner is installed directly from GitHub using [pip](http://www.pip-installer.org/en/latest/).
+
+```
+sudo pip install https://github.com/cbig/zrunner/archive/master.zip
+```
+
+#### 7. Clone Zonation tutorial using git
+
+With git installed, clone the tutorial repository with the following command:
+
+```
+git clone https://github.com/cbig/zonation-tutorial.git
+``` 
+
+#### 8. Run the tutorial runs
+
+You can run [5 basic tutorial variants](https://github.com/cbig/zonation-tutorial/tree/master/basic) defined in the configuration file `tutorial_runs.yaml` by using zrunner:
+
+```
+zrunner -l tutorial_runs.yaml
+```
+
+zrunner will produce an output file `results_XXX.yaml` in the same folder. `XXX` will correspond to information about your system. If everything went fine, you should see no critical errors on the screen and the yaml-file should report execution times for successful runs.
+
+----
 
 ## License
 
