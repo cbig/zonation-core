@@ -16,7 +16,7 @@ This repository contains the computational core of Zonation software.
 It does not contain the graphical user interface (GUI) components.
 
 You can dowload the latest stable release installers from the CBIG website
-http://cbig.it.helsinki.fi
+http://cbig.it.helsinki.fi/software/zonation/download/
 
 ## Compiling (dynamically) from source
 
