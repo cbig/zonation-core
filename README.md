@@ -133,7 +133,7 @@ git clone https://github.com/cbig/zonation-tutorial.git
 
 #### 8. Run the tutorial runs
 
-You can run [5 basic tutorial variants](https://github.com/cbig/zonation-tutorial/tree/master/basic) defined in the configuration file `tutorial_runs.yaml` by using zrunner:
+You can run [5 basic tutorial variants](https://github.com/cbig/zonation-tutorial/tree/master/basic) defined in the configuration file `basic/tests/ztests_basic.yaml ` by using zrunner:
 
 ```
 zrunner -l tutorial_runs.yaml
