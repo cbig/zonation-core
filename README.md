@@ -99,9 +99,9 @@ This stage is completely optional.
 
 You can test that Zonation works by running some of the runs used in the 
 [Hunter Valley tutorial](https://github.com/cbig/zonation-tutorial). This is not a thorough test, but it will at least give you an overview on whether Zonationis working as intended. Tutorial data and setup files are fetched using 
-[git](http://git-scm.com/) and run using [zrunner](https://github.com/cbig/zrunner).
+[git](http://git-scm.com/) and run using `zrunner` command line utility found in package [ztools](https://github.com/cbig/ztools).
 
-#### 5. Install zrunner dependencies
+#### 5. Install ztools dependencies
 
 First, install git:
 
@@ -115,12 +115,12 @@ Then, install Python packages needed by zrunner:
 sudo apt-get -y install python-yaml python-pip 
 ```
 
-#### 6. Install zrunner
+#### 6. Install ztools
 
-zrunner is installed directly from GitHub using [pip](http://www.pip-installer.org/en/latest/).
+`ztools` is installed directly from GitHub using [pip](http://www.pip-installer.org/en/latest/).
 
 ```
-sudo pip install https://github.com/cbig/zrunner/archive/master.zip
+sudo pip install https://github.com/cbig/ztools/archive/master.zip
 ```
 
 #### 7. Clone Zonation tutorial using git
