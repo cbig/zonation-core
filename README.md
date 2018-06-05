@@ -23,8 +23,7 @@ prioritization.
 This repository contains the computational core of Zonation software.
 It does not contain the graphical user interface (GUI) components.
 
-You can dowload the latest stable release installers from the CBIG website
-http://cbig.it.helsinki.fi/software/zonation/download/
+You can dowload the latest stable release installers (including the GUI) from [the official website](https://www.helsinki.fi/en/researchgroups/metapopulation-research-centre/software#section-14300) or from [releases](https://github.com/cbig/zonation-core/releases) on Github.
 
 ## Authors and contributors
 
