@@ -1,0 +1,7 @@
+
+- name: StandardName
+  description: > #ignore linebreaks below
+    The description of your awesome standard will be displayed in the about section of your site.
+    Here you can enter what you like as long as it makes sense as an about section for the Standard
+    for which this site is built for.
+  empty: ""

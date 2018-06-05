@@ -1,0 +1,15 @@
+- title: Sturdy Templates
+  description: Our templates are updated regularly so they don't break.
+  icon: fa-diamond
+
+- title: Ready to Ship
+  description: You can use this theme as is, or you can make changes!
+  icon: fa-paper-plane
+
+- title: Up to Date
+  description: We update dependencies to keep things fresh.
+  icon: fa-newspaper-o
+
+- title: Made with Love
+  description: You have to make your websites with love these days!
+  icon: fa-heart

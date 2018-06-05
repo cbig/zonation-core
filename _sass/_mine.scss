@@ -1,0 +1,55 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 75px;
+  /*padding-bottom: 50px;*/
+}
+
+h1 {
+  /*padding-top: 25px;*/
+  padding-bottom: 20px;
+}
+
+h1 span {
+  color: #aaa;
+  font-size: 50%;
+}
+
+img {
+  /*display: block;*/
+  height: auto;
+  max-width: 100%;
+}
+
+.thumbnail i {
+  padding-top: 10px;
+}
+
+ul.posts {
+  padding-left: 0;
+}
+
+.posts li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 2em;
+}
+
+footer .text-muted {
+  font-size: 75%;
+  color: #AEAEAE;
+}
+
+.posts span {
+  color: #aaa;
+  font-family: Monaco, "Courier New", monospace;
+  font-size: 80%;
+  margin-right: 1em;
+}
+
+.firstpost span {
+  color: #aaa;
+  font-family: Monaco, "Courier New", monospace;
+  font-size: 75%;
+  margin-right: 1em;
+}

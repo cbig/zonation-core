@@ -1,0 +1,23 @@
+- name: Sample data
+  icon: fa-floppy-o
+  link: http://www.opengeospatial.org
+
+- name: software
+  icon: fa-cog
+  link: software
+
+- name: Guidance
+  icon: fa-book
+  link: /guidance/
+
+- name: Applications
+  icon: fa-hospital-o
+  link: \#applications
+
+- name: Extensions
+  icon: fa-wrench
+  link: /extensions/
+
+- name: Implementations
+  icon: fa-fast-forward
+  link: implementations
