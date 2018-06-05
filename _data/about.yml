@@ -1,7 +1,5 @@
 
 - name: StandardName
   description: > #ignore linebreaks below
-    The description of your awesome standard will be displayed in the about section of your site.
-    Here you can enter what you like as long as it makes sense as an about section for the Standard
-    for which this site is built for.
+    Zonation is a conservation planning framework and software. It produces a hierarchical prioritization of the landscape based on the occurrence levels of biodiversity features in sites (cells) by iteratively removing the least valuable remaining cell while accounting for connectivity and generalized complementarity. The output of Zonation can be imported into GIS software to create maps or for further analysis. Zonation v. 4.0 can process very large data sets containing up to ~50 million grid cells with effective data.
   empty: ""
