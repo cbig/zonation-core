@@ -1,5 +1,7 @@
 #include "spirit_util.h"
 
+#include <boost/spirit/include/qi.hpp>
+
 template <typename Iterator>
 EscapedParser<Iterator>::EscapedParser(const char *escapedChars,
                                        bool acceptWhiteSpace) :

@@ -8,7 +8,6 @@
 #include "zig4lib_global.h"
 #include "error_util.h"
 #include "filepath.h"
-#include "enum_util.h"
 
 class QIODevice;
 class FilePath;

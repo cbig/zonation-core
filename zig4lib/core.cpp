@@ -1,6 +1,9 @@
 #include "core.h"
-#include <QDebug>
+
+#include <iostream>
+
 #include <QLocalSocket>
+#include <QDebug>
 #include <QTimer>
 
 namespace {
