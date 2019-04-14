@@ -9,6 +9,10 @@
 #ifndef _MSVC_
 #include <fcntl.h>
 #include <sys/time.h>
+
+// for getpid, read
+#include <unistd.h>
+
 // fallback in case /dev/urandom does not exist or fails
 unsigned int get_devrand_fallback(void)
 {

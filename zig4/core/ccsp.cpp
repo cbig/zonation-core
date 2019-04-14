@@ -10,6 +10,8 @@
 #include "randz.h"
 #include "grid_utils.h"
 
+#include <iostream>
+
 // Speedup-URGENT TODO for "Slow" mode: fix the "TODO thickness" (remove and unremove with diamond)
 //          in Grid_CCSP::cancel_removal and Grid_CCSP::init_removal
 // THEN, for debugging: "IF FIRST TIME DIFF>=4 -> SAVE STATUS, STATUS_BKP, LBLS_STATUS, LBLS_STATUS_BKP"

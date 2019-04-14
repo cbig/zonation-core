@@ -7,6 +7,8 @@
 #define NR_END 1
 #define FREE_ARG char*
 
+void zig_legacy_alloc_error(char error_text[]);
+
 float  **matrix( long nrl, long nrh, long ncl, long nch) {
 	long i, nrow=nrh-nrl+1, ncol=nch-ncl+1;
 	float **m;

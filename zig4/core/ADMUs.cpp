@@ -337,6 +337,8 @@ int ADMUs_output_per_admu_grp_curves_init(Tgroups_info& groups_info)
       }
     }
   }
+
+  return ADM_set.count;
 }
 
 int ADMUs_output_per_admu_grp_curves_iter(float prop_lost, Tgroups_info& groups_info)

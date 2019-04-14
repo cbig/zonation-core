@@ -462,6 +462,8 @@ generate_output_transf_single_layer(size_t bf, float* buff, int xsize, int ysize
   layer_name = ChangeFileExt(layer_name.mid(layer_name.lastIndexOf('/')+1));
   String ofname = odirname + "/feat_" + IntToStr(bf+1) + "_" + layer_name + "_" + trans_layer_str_append;
   SaveToRaster<float>(ofname, buff, nodatavalue, xsize, ysize);
+
+  return true;
 }
 
 bool
