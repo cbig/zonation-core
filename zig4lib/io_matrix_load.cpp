@@ -7,7 +7,6 @@
 
 #include <boost/spirit/include/qi.hpp>
 #include <boost/spirit/include/phoenix.hpp>
-#include <boost/spirit/home/phoenix/container.hpp>
 #include <boost/spirit/home/support/attributes.hpp>
 #include <boost/typeof/typeof.hpp>
 #include <boost/make_shared.hpp>
