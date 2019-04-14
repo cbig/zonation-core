@@ -15,12 +15,16 @@
 #include "zig4lib/io.h"
 #include "zig4lib/ini.h"
 #include "zig4lib/zconf.h"
-#include <cstdio>
-#include <ctime>
-#include <cstring>
-#include <cmath>
+
 #include <fstream>
+#include <iostream>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
+#include <ctime>
 #include <map>
+
+
 #include <QCoreApplication>
 
 #ifdef WIN32
@@ -1550,7 +1554,7 @@ int Read_IG_file_names()
 			continue;
 		if (strlen(line)<2)
 			continue;
-		int ns = sscanf(line, "%f %"SSCANF_MAX_FILELEN"[^\r\n]s", &weight, fname);
+		int ns = sscanf(line, "%f %" SSCANF_MAX_FILELEN "[^\r\n]s", &weight, fname);
 		if (2!=ns) {
 		  Form1->Memo1->Lines->Add("ERROR: could not parse line in info-gap list file: "+String(line));
 		  continue;
@@ -3256,7 +3260,7 @@ bool Load_and_check_condition_matrixes(int cond_mode)
 			continue;
 		if (strlen(line)<2)
 			continue;
-		int ns = sscanf(line, "%i %"SSCANF_MAX_FILELEN"[^\r\n]s", &cond_num, fname);
+		int ns = sscanf(line, "%i %" SSCANF_MAX_FILELEN "[^\r\n]s", &cond_num, fname);
 		if (2!=ns) {
 		  String sm;
 		  if (cond_mode)
@@ -3533,7 +3537,7 @@ int Load_ADMU_descriptions()
 			continue;
 		if (strlen(line)<8)
 			continue;
-		in_cnt = sscanf(line, "%i %f %f %"SSCANF_MAX_FILELEN"[^\r\n]s", &fid, &glob_weight, &loc_weight, &unit_name[0]);
+		in_cnt = sscanf(line, "%i %f %f %" SSCANF_MAX_FILELEN "[^\r\n]s", &fid, &glob_weight, &loc_weight, &unit_name[0]);
 		if (in_cnt!=4)
 		{
 			Form1->Memo1->Lines->Add("Wrong number - 4 expected - of elements in ADMU descriptions file on row "+IntToStr(row_count));
@@ -3555,7 +3559,7 @@ int Load_ADMU_descriptions()
 			continue;
 		if (strlen(line)<8)
 			continue;
-		in_cnt = sscanf(line, "%i %f %f %"SSCANF_MAX_FILELEN"[^\r\n]s", &fid, &glob_weight, &loc_weight, &unit_name[0]);
+		in_cnt = sscanf(line, "%i %f %f %" SSCANF_MAX_FILELEN "[^\r\n]s", &fid, &glob_weight, &loc_weight, &unit_name[0]);
 		if (in_cnt!=4)
 		{
 			Form1->Memo1->Lines->Add("Wrong number - 4 expected - of elements in ADMU descriptions file on row "+IntToStr(row_count));
@@ -3853,7 +3857,7 @@ read_corridor_domain_layers_file_n_layers(Corr_settings& corr_set)
 
     float weight;
     char fname[MAX_FILELEN];
-    int ns = sscanf(line, "%f %"SSCANF_MAX_FILELEN"[^\r\n]s", &weight, fname);
+    int ns = sscanf(line, "%f %" SSCANF_MAX_FILELEN "[^\r\n]s", &weight, fname);
     if (2!=ns) {
       Form1->Memo1->Lines->Add("ERROR: could not parse line in corridors domain list file ("+String(fname)+"): "+String(line));
     }
