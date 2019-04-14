@@ -1,8 +1,10 @@
 #include "io.h"
 #include "pod.h"
 #include "spirit_util.h"
-#include "spirit_error.h"
 #include "ptr_util.h"
+#include "spirit_error.h"
+
+#include <string>
 
 #include <boost/fusion/include/adapt_struct.hpp>
 
@@ -16,20 +18,6 @@ BOOST_FUSION_ADAPT_STRUCT(
 
 #include <boost/spirit/include/qi.hpp>
 #include <boost/spirit/include/phoenix.hpp>
-#include <boost/spirit/home/phoenix/container.hpp>
-#include <boost/spirit/home/support/attributes.hpp>
-#include <boost/typeof/typeof.hpp>
-#include <boost/make_shared.hpp>
-#include <boost/lexical_cast.hpp>
-
-namespace {
-	// no way of instantiating a template function in lazy statement
-	// need to have this as a function or a function object
-	std::string intToString(int i)
-	{
-		return boost::lexical_cast<std::string>(i);
-	}
-}
 
 // we should probably put this in a better place - a header, maybe?
 namespace boost { namespace spirit { namespace traits {
@@ -71,16 +59,20 @@ bool loadZBQPFile(ZBQPFile& bqpFile, QIODevice& device, ErrorCallback& err)
 
 	// rules
 	qi::rule<Iterator> indexRule;
+
+	auto setRuleName  = [&indexRule, &index]() {
+	  ++ph::ref(index);
+	  indexRule.name(std::to_string(index));
+	};
+
 	indexRule =
-	                // set rule name (will be propagated on error)
-	                qi::eps [
-	                ph::bind(&qi::rule<Iterator>::name, indexRule,
-	                         ph::bind(&intToString, ++ph::ref(index)))
-	                ] >>
-	                     // pass on match
-	                     qi::int_ [
-	                     qi::_pass = (qi::_1 == ph::ref(index))
-	                ];
+	  // set rule name (will be propagated on error)
+	  qi::eps[ setRuleName ]
+	  >>
+	  // pass on match
+	  qi::int_ [
+		    qi::_pass = (qi::_1 == ph::ref(index))
+		    ];
 
 	DoubleParser<Iterator> double_;
 
