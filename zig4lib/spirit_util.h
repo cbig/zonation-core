@@ -5,9 +5,10 @@
 
 #define BOOST_SPIRIT_UNICODE // We'll use unicode (UTF8) all throughout
 
-#include <boost/spirit/include/qi.hpp>
+#include <boost/spirit/include/qi_grammar.hpp>
 
 typedef QVector<Char>::ConstIterator DefaultIterator;
+
 
 template <typename Iterator>
 class EscapedParser : public boost::spirit::qi::grammar<Iterator, Char()>
@@ -72,6 +73,7 @@ private:
 	boost::spirit::qi::rule<Iterator> start;
 };
 
+
 template <typename Iterator>
 class DoubleParser : public boost::spirit::qi::grammar<Iterator, double()>
 {
@@ -89,6 +91,7 @@ class IntParser : public boost::spirit::qi::grammar<Iterator, int()>
 	private:
 	boost::spirit::qi::rule<Iterator, int()> start;
 };
+
 
 // template function implementation
 

@@ -1,5 +1,6 @@
-#include "config.h"
 #include "io.h"
+
+#include "config.h"
 #include "pod.h"
 #include "ini.h"
 #include "enum_util.h"
@@ -8,6 +9,9 @@
 #include "io_arg.h"
 #include "env.h"
 #include "split_winmain.h"
+
+#include <iostream>
+
 #include <QFile>
 #include <QList>
 #include <QSet>

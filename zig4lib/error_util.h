@@ -1,9 +1,10 @@
 #ifndef ERROR_UTIL_H
 #define ERROR_UTIL_H
 
-#include <QString>
-#include <boost/function.hpp>
+//#include <boost/function.hpp>
+
 #include <QDebug>
+#include <QString>
 
 // zeLevel is needed by ErrorCallback and
 // LineModify. ErrorCallback is needed by ZError (static methods...)

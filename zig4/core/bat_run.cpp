@@ -2873,7 +2873,7 @@ private:
 	boost::condition_variable full_cond; ///< queue is not empty
 
 	///iteration specifics
-	std::auto_ptr<SearchIteration> iteration;
+	std::shared_ptr<SearchIteration> iteration;
 	boost::mutex global_resource_mutex; ///< mutex for global references
 	unsigned int iteration_round;
 
@@ -3732,6 +3732,8 @@ bool write_output_files_at_the_end()
   
   post_process(PPA_fname);
   Form1->Memo1->Lines->Add("============================================================"); 
+
+  return true;
 }
 
 bool bat_run2(ZConf const& conf)

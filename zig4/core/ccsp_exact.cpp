@@ -1,9 +1,11 @@
+#include "ccsp.h"
+
 #include "Unit1.h"
 #include "bat_run.h"
 #include "randz.h"
 #include "grid_utils.h"
-#include "ccsp.h"
 
+#include <iostream>
 //bool use_smart_count_labels = true;
 bool use_smart_count_labels = false;
 
@@ -268,7 +270,7 @@ Grid_CCSP::calc_penalty(int diff, size_t area, float richness)
     return calc_penalty_old_area_prop(diff, area, richness);
   else if (13 == rule_formula) 
     return calc_penalty_min_area_over_blob_area(diff, area, richness);
-  else if (14 == rule_formula)
+  else // if (14 == rule_formula)
     return calc_penalty_min_area_over_old_area_prop(diff, area, richness);
 }
 
@@ -980,6 +982,8 @@ Grid_CCSP::slow_accept_removal(int x, int y)
   }
 
   do_save_corridor_boundaries_layer();
+
+  return true;
 }
 
 int before_a =0, after_a=0, after_b=0, after_c =0;

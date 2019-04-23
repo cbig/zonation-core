@@ -2,6 +2,9 @@
 #define RASTER_H
 
 #include "zig4lib_global.h"
+
+#include <iostream>
+
 #include <gdal/gdal_priv.h>
 
 template <typename T>
@@ -164,7 +167,12 @@ public:
 	{
 		if(!data) {
 			data = new T[xsize_ * ysize_];
-			band->RasterIO(GF_Read, 0, 0, xsize_, ysize_, data, xsize_, ysize_, GDALTypeTraits<T>::GDALType, 0, 0);
+			auto err = band->RasterIO(GF_Read, 0, 0, xsize_, ysize_, data, xsize_, ysize_, GDALTypeTraits<T>::GDALType, 0, 0);
+			if (CPLErr::CE_None != err) {
+			  std::cerr << "Note error in GDALRasterBand::RasterIO() with xsize: "
+				    << xsize_ << ", ysize: " << ysize_ << "\n";
+			}
+
 		}
 		return data[x + y * xsize_];
 	}
@@ -201,7 +209,14 @@ struct Dataset {
 	{
 		if(dataset) {
 			int xsize = dataset->GetRasterXSize(), ysize = dataset->GetRasterYSize();
-			dataset->GetRasterBand(band)->RasterIO(GF_Write, 0, 0, xsize, ysize, data, xsize, ysize, GDALTypeTraits<T>::GDALType, 0, linespace == 0 ? 0 : GDALTypeTraits<T>::size * linespace);
+			auto err = dataset->GetRasterBand(band)->
+			  RasterIO(GF_Write, 0, 0, xsize, ysize, data, xsize, ysize,
+				   GDALTypeTraits<T>::GDALType, 0,
+				   linespace == 0 ? 0 : GDALTypeTraits<T>::size * linespace);
+			if (CPLErr::CE_None != err) {
+			  std::cerr << "Note error in GDALRasterBand::RasterIO() with xsize: "
+				    << xsize << ", ysize: " << ysize << "\n";
+			}
 		}
 	}
 

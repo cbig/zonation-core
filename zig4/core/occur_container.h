@@ -192,13 +192,13 @@ class GCC_PACK_STRUCT_ATTRIBUTE Biodiv_Features_Occur_Container_compact
   { priv_it = 0; if (priv_size > 0) return priv_key[priv_it]; else return 0;};
 
   inline BFOC_size_t overflow() const
-  { return std::numeric_limits<size_t>::max(); };
+  { return std::numeric_limits<BFOC_size_t>::max(); };
 
   inline BFOC_size_t next(size_t i) const
   { 
     priv_it++; 
     if (priv_it < priv_size) return priv_key[priv_it];
-    else return std::numeric_limits<size_t>::max();
+    else return std::numeric_limits<BFOC_size_t>::max();
   };
 
   // An assignment operator like this is needed for example in marginal_loss.cpp:~60

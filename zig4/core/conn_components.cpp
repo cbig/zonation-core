@@ -1,10 +1,12 @@
 #include "conn_components.h"
-#include "matrix_utils.h"
-#include <algorithm>
 
+#include <algorithm>
+#include <iostream>
+#include <boost/scoped_array.hpp>
+
+#include "matrix_utils.h"
 // only for saveToRaster!  <- TODO: remove
 #include "Unit1.h"
-#include <boost/scoped_array.hpp>
 
 //size_t Grid_Connected_Components::n_cc_lbl_calc=0;
 

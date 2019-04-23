@@ -139,22 +139,22 @@ struct InstanceData
 
 inline QDataStream& operator<<(QDataStream& stream, const std::vector<quint32> v)
 {
-
+  return stream;  // TODO
 }
 
 inline QDataStream& operator>>(QDataStream& stream, const std::vector<quint32> v)
 {
-
+  return stream;  // TODO
 }
 
 inline QDataStream& operator<<(QDataStream& stream, const std::vector<float> v)
 {
-
+  return stream;  // TODO
 }
 
 inline QDataStream& operator>>(QDataStream& stream, const std::vector<float> v)
 {
-
+  return stream;  // TODO
 }
 
 inline QDataStream& operator<<(QDataStream& stream, const InstanceData& data)

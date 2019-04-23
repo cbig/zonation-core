@@ -937,8 +937,9 @@ Grid_CCSP::accept_fast_removal(int rx, int ry)
 
     //  }
 
-
   do_save_corridor_boundaries_layer();
+
+  return true;
 }
 
 // (rx,ry): coordinates of cell to remove

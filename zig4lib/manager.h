@@ -170,7 +170,7 @@ public:
 
 	operator bool() const
 	{
-	  return file;
+	  return file != nullptr;
 	}
 
 	int refCount() const
