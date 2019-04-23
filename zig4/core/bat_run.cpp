@@ -16,6 +16,7 @@
 #include "zig4lib/pod.h"
 #include "zig4lib/zconf.h"
 #include <cstdio>
+#include <iostream>
 #include <ctime>
 #include <cstring>
 #include <limits>
